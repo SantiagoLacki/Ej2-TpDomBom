@@ -13,6 +13,43 @@
   </header>
 
   <main>
+      <div class="container d-flex flex-column align-items-center">
+        <h1 class="text-center mt-5">Crear Nueva Persona</h1>
+        <form id="personaForm" class="d-flex flex-column align-items-center w-50 bg-light-subtle p-4 my-3 rounded">
+            <label for="nombre" class="w-100  mt-4">Nombre:</label>
+            <input type="text" class="w-100" id="nombre" required placeholder="Juan">
+
+            <label for="edad" class="w-100  mt-4">Edad:</label>
+            <input type="number" class="w-100" id="edad" required placeholder="25">
+
+            <label for="dni" class="w-100  mt-4">DNI:</label>
+            <input type="text" class="w-100" id="dni" required placeholder="12345678">
+
+            <label for="sexo" class="w-100  mt-4">Sexo:</label>
+            <select id="sexo" class="w-100" required>
+                <option value="">-- Por favor, selecciona una opción --</option>
+                <option value="H">Hombre</option>
+                <option value="M">Mujer</option>
+            </select>
+
+            <label for="peso" class="w-100  mt-4">Peso (kg):</label>
+            <input type="number" class="w-100" step="0.1" id="peso" required>
+
+            <label for="altura" class="w-100  mt-4">Altura (m):</label>
+            <input type="number" class="w-100" step="0.01" id="altura" required>
+
+            <label for="anioNacimiento" class="w-100  mt-4">Año de Nacimiento:</label>
+            <input type="number" class="w-100" id="anioNacimiento" required>
+
+            <button type="submit" class="btn btn-primary mt-4">Crear Persona</button>
+        </form>
+
+        <div class="button-group d-flex mx-4 align-items-center">
+            <button id="mostrarGeneracionBtn" class="btn btn-warning d-none">Mostrar Generación</button>
+            <button id="esMayorDeEdadBtn" class="btn btn-success d-none">Es Mayor de Edad</button>
+            <button id="mostrarDatosBtn" class="btn btn-info d-none">Mostrar Datos</button>
+        </div>
+    </div>
 
   </main>
 
