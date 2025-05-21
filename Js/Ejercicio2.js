@@ -26,15 +26,12 @@
 // indicar en un alert el resultado de la función 
 // correspondiente.
 
-// app.js
-
-// Definición de la clase Persona (copia la clase completa aquí o asegúrate de que esté en un archivo separado y bien enlazado)
 class Persona {
   constructor(nombre, edad, dni, sexo, peso, altura, anioNacimiento) {
       this.nombre = nombre;
       this.edad = edad;
       this.dni = dni;
-      this.sexo = sexo; // 'H' para hombre, 'M' para mujer
+      this.sexo = sexo;
       this.peso = peso;
       this.altura = altura;
       this.anioNacimiento = anioNacimiento;
@@ -44,7 +41,6 @@ class Persona {
     let generacion = "";
     let rasgoCaracteristico = "";
 
-    // Lógica para determinar la generación basada en el año de nacimiento
     if (this.anioNacimiento >= 1994 && this.anioNacimiento <= 2010) {
         generacion = "Generación Z (Centennials)";
         rasgoCaracteristico = "Irreverencia, innovación y nativos digitales.";
@@ -106,7 +102,6 @@ function valores (e) {
   persona = new Persona(nombre, edad, dni, sexo, peso, altura, anioNacimiento);
   alert('¡Persona creada exitosamente!');
 
-  // Habilitar los botones de acciones
   mostrarGeneracionBtn.classList.remove('d-none');
   esMayorDeEdadBtn.classList.remove('d-none');
   mostrarDatosBtn.classList.remove('d-none')
@@ -150,78 +145,3 @@ enviarForm.addEventListener('submit', valores)
 mostrarGeneracionBtn.addEventListener('click', mostrarGeneracion);
 esMayorDeEdadBtn.addEventListener('click', esMayorDeEdad);
 mostrarDatosBtn.addEventListener('click', mostrarDatos);
-
-
-
-
-
-
-
-
-
-
-
-
-// class Persona {
-//   constructor(nombre, edad, dni, sexo, peso, altura, anioNacimiento) {
-//     this.nombre = nombre;
-//     this.edad = edad;
-//     this.dni = dni;
-//     this.sexo = sexo;
-//     this.peso = peso;
-//     this.altura = altura;
-//     this.anioNacimiento = anioNacimiento;
-//     this.generacion = generacion
-//   }
-//   mostrarDatos(e) {
-//     e.prevenDefault()
-//     console.log(`Nombre: ${this.nombre}, Edad: ${this.edad}, DNI: ${this.dni}, Sexo: ${this.sexo}, Peso: ${this.peso}, Altura: ${this.altura} , Anio de nacimiento: ${this.anioNacimiento}`)
-//     document.writeln("DATOS DE LA PERSONA: <br>");
-//     document.writeln("Nombre: ", this.nombre, "<br");
-//     document.writeln("Edad: ", this.edad, "<br>");
-//     document.writeln("DNI: ", this.dni, "<br>");
-//     document.writeln("Sexo: ", this.sexo, "<br>");
-//     document.writeln("Peso: ", this.peso, "<br>");
-//     document.writeln("Altura: ", this.altura, "<br>");
-//     document.writeln("Año de Nacimiento: ", this.anioNacimiento, "<br>");
-//     document.writeln("Generacion: ", this.generacion, "<br>");
-//   }
-//   mostrarGeneracion() {
-//     if (this.anioNacimiento >= 1994 && this.anioNacimiento <= 2010) {
-//       this.generacion = "Generacion Z"
-//       console.log("Generación Z")
-//     }
-//     else if (this.anioNacimiento >= 1981 && this.anioNacimiento <= 1993) {
-//       this.generacion = "Generacion Y"
-//       console.log("Generación Y")
-//     }
-//     else if (this.anioNacimiento >= 1969 && this.anioNacimiento <= 1980) {
-//       this.generacion = "Generacion X"
-//       console.log("Generación X")
-//     }
-//     else if (this.anioNacimiento >= 1949 && this.anioNacimiento <= 1968) {
-//       this.generacion = "Baby Boom"
-//       console.log("Generación Baby Boom")
-//     }
-//     else if (this.anioNacimiento >= 1930 && this.anioNacimiento <= 1948) {
-//       this.generacion = "Generacion Silent Generation"
-//       console.log("Generación Silent Generation")
-//     }
-//     else {
-//       this.generacion = "Generacion desconocida"
-//       console.log("No perteneces a ninguna generacion.")
-//     }
-//   }
-//   mostrarMayorEdad() {
-//     if (this.anioNacimiento > 0 && this.anioNacimiento <= 2007) {
-//       document.writeln("<p>Naciste en: ", this.anioNacimiento, " Eres mayor de edad.</p> <br><br>")
-//     }
-//     else {
-//       document.writeln("<p>Naciste en: ", this.anioNacimiento, " Eres menor de edad.</p> <br><br>")
-//     }
-//   }
-// }
-
-// const btnMostrarDatos = document.getElementById("btnMostrarDatos");
-
-// btnMostrarDatos.addEventListener('click', mostrarDatos)
